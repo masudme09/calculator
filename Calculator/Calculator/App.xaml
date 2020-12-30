@@ -1,0 +1,59 @@
+﻿<Application x:Class="Calculator.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Calculator"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <SolidColorBrush x:Key="NumberButtonColor" Color="#FF3C3636"/>
+        
+        <!--Used for number button styling-->
+        <Style x:Key="NumberButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource ResourceKey=NumberButtonColor}"/>
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+        
+        <!--Used for Operator Button Styling-->
+        <Style x:Key="OperatorButtonStyle" TargetType="Button" BasedOn="{StaticResource NumberButtonStyle}">
+            <Setter Property="Background" Value="Green"/>
+        </Style>
+
+         <!--Used of other button styling-->
+        <Style x:Key="OtherButtonStyle" TargetType="Button" BasedOn="{StaticResource NumberButtonStyle}">
+            <Setter Property="Background" Value="#FF767070"/>
+        </Style>
+
+        <!--For small window number button style-->
+        <Style x:Key="smallWidowNumberButton" TargetType="Button" BasedOn="{StaticResource NumberButtonStyle}">
+            <Setter Property="FontSize" Value="20"/>
+        </Style>
+        
+        <!--For small window operator button style-->
+        <Style x:Key="smallWidowOperatorButton" TargetType="Button" BasedOn="{StaticResource smallWidowNumberButton}">
+            <Setter Property="Background" Value="Green"/>
+        </Style>
+        
+        
+        <Style x:Key="smallWidowOtherButton" TargetType="Button" BasedOn="{StaticResource smallWidowNumberButton}">
+            <Setter Property="Background" Value="#FF767070"/>
+        </Style>
+
+        <Style x:Key="StyleWindowDefault" TargetType="Window">
+            <Setter Property="Height" Value="450"/>
+            <Setter Property="Width" Value="400"/>
+        </Style>
+
+        <Style x:Key="StyleWindowSmall" TargetType="Window">
+            <Setter Property="Height" Value="300"/>
+            <Setter Property="Width" Value="266"/>
+        </Style>
+
+        <Style x:Key="lblFontSizeDefault" TargetType="Label">
+            <Setter Property="FontSize" Value="40"/>
+        </Style>
+        
+        <Style x:Key="lblFontSizeSmall" TargetType="Label">
+            <Setter Property="FontSize" Value="20"/>
+        </Style>
+    </Application.Resources>
+</Application>
